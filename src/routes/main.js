@@ -30,6 +30,13 @@ routes.get("/gallery" , async (req,res) => {
     .catch(err => console.log(err));
 });
 
+routes.get("/signin", async function(req,res){
+        await Detail.findOne({"_id":"6469fac6b6b1c6e6933c9d31"}).then(function(data){
+
+        res.render("signin",{details:data})
+})}
+);
+
 routes.post("/contact-us", function(req,res){
         const email = req.body.email;
         const mobile = req.body.mobile;
@@ -43,5 +50,19 @@ routes.post("/contact-us", function(req,res){
 
 
 });
+
+routes.get("/about",async  (req,res) =>{
+        const details = await Detail.findOne({"_id":"6469fac6b6b1c6e6933c9d31"});
+        const service = await Service.find();
+        res.render("faculty", {details:details, services:service})
+})
+
+routes.get("/courses", async (req,res) => {
+        const details = await Detail.findOne({"_id":"6469fac6b6b1c6e6933c9d31"});
+        const service = await Service.find();
+        res.render("courses",{data:details, services:service});
+
+})
+
 
 module.exports = routes;

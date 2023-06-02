@@ -1,0 +1,42 @@
+body {
+  height: 100%;
+}
+
+
+form{
+  display:block;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.navbar-nav .nav-item:hover .nav-link {
+  color:#000; /* Change the text color on hover */
+  background-color: #fff; /* Change the background color on hover */
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #333; /* Change the background color of dropdown items on hover */
+}
