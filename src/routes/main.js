@@ -5,7 +5,7 @@ const routes = express.Router();
 const slider = require("../models/slider");
 const Service = require("../models/service");
 const contact = require("../models/contact");
-
+const Student = require("../models/students")
 
 routes.get("/", async (req,res) =>{
         const details = await Detail.findOne({"_id":"6469fac6b6b1c6e6933c9d31"});
@@ -50,7 +50,6 @@ routes.post("/contact-us", function(req,res){
 
 
 });
-
 routes.get("/about",async  (req,res) =>{
         const details = await Detail.findOne({"_id":"6469fac6b6b1c6e6933c9d31"});
         const service = await Service.find();
@@ -62,6 +61,46 @@ routes.get("/courses", async (req,res) => {
         const service = await Service.find();
         res.render("courses",{data:details, services:service});
 
+})
+
+routes.get("/signup", async (req,res) => {
+        const details = await Detail.findOne({"_id":"6469fac6b6b1c6e6933c9d31"});
+        res.render("signup",{details:details});
+})
+
+routes.post("/signin", async (req,res) => {
+        const email = req.body.email;
+        const password = req.body.password;
+        Student.findOne({email:email}).then((data) =>{
+                if(!data){
+                        res.send("Email does not exists, please sign up");
+                }else{
+                        if(data.password===password){
+                                res.redirect("/");
+                        }else{
+                                res.send("Password Mismatch");
+                        }
+                }
+        });
+});
+
+routes.post("/signup", async (req,res) => {
+        const fname = req.body.fname;
+        const lname = req.body.lname;
+        const email = req.body.email;
+        const password = req.body.password;
+        console.log("yp");
+        Student.findOne({email:email}).then( function(data){
+                if (!data){
+                        Student.create({
+                                fname:fname,lname:lname,email:email, password:password
+                        });
+                        res.redirect("/");
+                }else{
+                        console.log(" Error...! Email already registered")
+                }
+        }
+        )
 })
 
 

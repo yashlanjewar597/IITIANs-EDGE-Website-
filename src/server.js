@@ -9,6 +9,7 @@ const slider = require("./models/slider.js");
 const app = express();
 const Detail = require("./models/detail.js");
 const Service = require("./models/service.js");
+const Student = require("./models/students.js");
 
 app.set("view engine","hbs");
 app.set("views","views");
@@ -24,6 +25,13 @@ async function run(){
         await mongoose.connect(process.env.URI);
     }finally{
         console.log("Succesfully established connection with database.........!");
+
+        // Student.create({
+        //     fname:"Yash",
+        //     lname:"Lanjewar",
+        //     email:"yashlanjewar597@gmail.com",
+        //     password:"REFRIGERATOR"
+        // })
 
         // Service.create([{
         //     icon:"fa-solid fa-folder-open",

@@ -10,13 +10,14 @@
     <title>Hello world!</title>
  </head>
   </head>
-  <body class="text-center">
+  <body class="text-center bg-o">
 
       {{>navrar data=details}}
 
       <!-- Section: Design Block -->
+<section class="">
   <!-- Jumbotron -->
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
     <div class="container">
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -35,7 +36,22 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
             <div class="card-body py-5 px-md-5">
-              <form action="/signin" method="post">
+              <form action="/signup" method="post">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1" name="fname" class="form-control" />
+                      <label class="form-label" for="form3Example1">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example2" name="lname" class="form-control" />
+                      <label class="form-label" for="form3Example2">Last name</label>
+                    </div>
+                  </div>
+                </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
@@ -50,12 +66,8 @@
                 </div>
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block mb-4 mr-5">
-                  Sign in
+                  Sign up
                 </button>
-                <div>
-                  <p class="mb-0">Don't have an account? <a href="/signup" class="text-blue-50 fw-bold">Sign Up</a>
-                  </p>
-                </div>
               </form>
             </div>
           </div>
@@ -63,6 +75,8 @@
       </div>
     </div>
   </div>
+  <!-- Jumbotron -->
+</section>
 <!-- Section: Design Block -->
     
 
@@ -77,3 +91,4 @@
     
   </body>
 </html>
+
