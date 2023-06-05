@@ -12,19 +12,20 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    {{>navrar data=data}}
-
-    {{>slider slides=images}}
+    
 
     <div class="bg"></div>
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
-    
+<section class="bg1">
+    {{>navrar data=data}}
+
+    {{>slider slides=images}}
     {{!----------------------Banner1---------------------------------}}
     <section class = "banner_section py-5 bg1 border-bottom">
       <div class = "container text-center">
         <div class = "row">
-          <div class="col-md-12">
+          <div class="col-md-12" style="color: white;">
             <h1>Start you IIT journey from here.........!</h1>
             <p1>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty </p1>
             <br>
@@ -34,7 +35,7 @@
       </div>
 
     </section>
-
+</section>
     {{! -------------------------Services Section--------------------------}}
     <section id="services" class="py-6">
       <div class="container">

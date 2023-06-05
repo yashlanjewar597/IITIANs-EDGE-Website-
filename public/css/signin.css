@@ -33,8 +33,9 @@ form{
   border-top-right-radius: 0;
 }
 .navbar-nav .nav-item:hover .nav-link {
-  color:#000; /* Change the text color on hover */
-  background-color: #fff; /* Change the background color on hover */
+  color:#fff; /* Change the text color on hover */
+  background-color:#000; /* Change the background color on hover */
+  border-radius: 10px;
 }
 
 .navbar-nav .dropdown-item:hover {
