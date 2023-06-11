@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const studentSchema = new mongoose.Schema({
+const batch1Schema = new mongoose.Schema({
     fname:String,
     lname:String,
     email:{
@@ -12,6 +12,6 @@ const studentSchema = new mongoose.Schema({
     },
     contact:Number,
     b_code:String
-});
 
-module.exports = mongoose.model("student", studentSchema)
+})
+module.exports= mongoose.model("std-11-student", batch1Schema)
