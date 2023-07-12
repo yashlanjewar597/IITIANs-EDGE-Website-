@@ -10,6 +10,7 @@ const app = express();
 const Detail = require("./models/detail.js");
 const Service = require("./models/service.js");
 const Student = require("./models/students.js");
+const faculty = require("./models/faculty.js");
 
 app.set("view engine","hbs");
 app.set("views","views");
@@ -25,6 +26,54 @@ async function run(){
         await mongoose.connect(process.env.URI);
     }finally{
         console.log("Succesfully established connection with database.........!");
+        
+        //  faculty.create([{
+        //      url:"/static/images/Anil Awasthi Transparent.png",
+        //      heading:"Heading",
+        //      para:"information about faculty",
+        //      href:"/about/#1",
+        //      id:"1"
+        
+
+        //  },
+        // {
+        //      url:"/static/images/Aryan Aher Transparent.png",
+        //      heading:"Heading",
+        //      para:"information about faculty",
+        //      href:"/about/#2",
+        //      id:"2"
+        
+
+        //  },
+        //  {
+        //      url:"/static/images/Untitled design - dharan sai.png",
+        //      heading:"Heading",
+        //      para:"information about faculty",
+        //      href:"/about/#3",
+        //      id:"3"
+
+        //  },{
+        //      url:"/static/images/Aryan Sinha Transparent.png",
+        //      heading:"Heading",
+        //      para:"information about faculty",
+        //      href:"/about/#4",
+        //      id:"4"
+
+        //  },{
+        //     url:"/static/images/Sauhardya Dutta Transparent.png",
+        //     heading:"Heading",
+        //     para:"information about faculty",
+        //     href:"/about/#5",
+        //     id:"5"
+
+        // },{
+        //     url:"/static/images/Vijay Sethiya Transparent.png",
+        //     heading:"Heading",
+        //     para:"information about faculty",
+        //     href:"/about/#6",
+        //     id:"6"
+
+        // }]);
 
         // Student.create({
         //     fname:"Yash",

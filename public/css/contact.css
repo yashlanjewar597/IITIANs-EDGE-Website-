@@ -38,7 +38,7 @@
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
-    background-color: #0381fe;
+    background-color: #0c0c0c;
   }
   
   .contact_us_2 .responsive-container-block {
@@ -185,7 +185,7 @@
   
   .contact_us_2 .submit-btn {
     width: 98%;
-    background-color: #03a9f4;
+    background-color: #f42703;
     height: 60px;
     font-size: 20px;
     font-weight: 700;

@@ -6,6 +6,7 @@ const slider = require("../models/slider");
 const Service = require("../models/service");
 const contact = require("../models/contact");
 const Student = require("../models/students");
+const Faculty = require("../models/faculty");
 const ele = require("../models/11th");
 const twe = require("../models/12th");
 
@@ -54,8 +55,8 @@ routes.post("/contact-us", function(req,res){
 });
 routes.get("/about",async  (req,res) =>{
         const details = await Detail.findOne({"_id":"6469fac6b6b1c6e6933c9d31"});
-        const service = await Service.find();
-        res.render("faculty", {details:details, services:service})
+        const fac = await Faculty.find();
+        res.render("faculty", {details:details, fac:fac})
 })
 
 routes.get("/courses", async (req,res) => {
